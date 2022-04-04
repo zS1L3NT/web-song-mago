@@ -3,7 +3,7 @@
 		/** Transpiler */
 		"target": "esnext",
 		"lib": ["dom", "dom.iterable", "esnext"], // "esnext"
-		"module": "commonjs", // esnext
+		"module": "esnext", // commonjs
 		"moduleResolution": "node",
 		"esModuleInterop": true,
 		"allowSyntheticDefaultImports": true,
@@ -12,6 +12,7 @@
 		"rootDir": "src",
 		"outDir": "dist",
 		"typeRoots": ["./node_modules/@types", "./src/@types"],
+		"sourceMap": true,
 
 		/** Type Checking */
 		"strict": true,
@@ -27,15 +28,15 @@
 		"noImplicitOverride": true,
 		"allowUnusedLabels": true,
 		"resolveJsonModule": true,
-		"forceConsistentCasingInFileNames": true
+		"forceConsistentCasingInFileNames": true,
 
 		/** Other */
-		// "noEmit": true,
+		"noEmit": true,
 		// "allowJs": true,
 		// "jsx": "react-jsx",
 		// "skipLibCheck": true,
 		// "isolatedModules": true,
-		// "incremental": true
+		// "incremental": true,
 	},
 	"include": ["src"]
 }

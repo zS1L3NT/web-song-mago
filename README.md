@@ -22,6 +22,8 @@ $ npm run dev
 
 ## Built with
 
+-   TypeScript
+    -   [![typescript](https://img.shields.io/github/package-json/dependency-version/zS1L3NT/web-song-mago/dev/typescript?style=flat-square)](https://npmjs.com/package/typescript)
 -   Vite
     -   [![vite](https://img.shields.io/github/package-json/dependency-version/zS1L3NT/web-song-mago/dev/vite?style=flat-square)](https://npmjs.com/package/vite)
 -   ToneJS
