@@ -84,9 +84,9 @@ const sequence: [string, number, number][] = [
 	// #endregion
 ]
 
-document.getElementById("play").onclick = async () => {
+document.getElementById("play")?.addEventListener("click", async () => {
 	for (const [note, time, pause] of sequence) {
 		synth.triggerAttackRelease(note, `${16 / time}n`)
 		await new Promise(res => setTimeout(res, pause * 250))
 	}
-}
+})
