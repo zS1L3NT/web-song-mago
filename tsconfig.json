@@ -9,9 +9,9 @@
 		"allowSyntheticDefaultImports": true,
 
 		/** Project */
-		"rootDir": ".",
+		"rootDir": "src",
 		"outDir": "dist",
-		"typeRoots": ["./node_modules/@types"],
+		"typeRoots": ["./node_modules/@types", "./src/@types"],
 
 		/** Type Checking */
 		"strict": true,
@@ -37,5 +37,5 @@
 		// "isolatedModules": true,
 		// "incremental": true
 	},
-	"include": ["."]
+	"include": ["src"]
 }
