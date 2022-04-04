@@ -2,6 +2,7 @@
 	"name": "web-song-mago",
 	"description": "Mago Song played from JavaScript",
 	"author": "zS1L3NT <zechariahtan144@gmail.com> (https://www.zectan.com)",
+	"license": "GPL-3.0",
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
