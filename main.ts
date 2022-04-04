@@ -1,9 +1,9 @@
 import { PolySynth, Synth } from "tone"
 
+type iNotes = [string, number, number][]
 const synth = new PolySynth(Synth).toDestination()
 
-const sequence: [string, number, number][] = [
-	// #region Beginning
+const Beginning: iNotes = [
 	["D5", 2, 1],
 	["C5", 1, 0.5],
 	["A#4", 1, 0.5],
@@ -80,10 +80,10 @@ const sequence: [string, number, number][] = [
 	["D5", 1, 1],
 	["C5", 1, 1],
 
-	["D4", 1, 1],
-	// #endregion
+	["D4", 1, 1]
+]
 
-	// #region Verse 1
+const Verse1: iNotes = [
 	["D5", 1, 1],
 	["D5", 1, 1],
 	["C5", 1, 1],
@@ -148,10 +148,10 @@ const sequence: [string, number, number][] = [
 	["D5", 1, 0.5],
 	["C5", 1, 0.5],
 	["D5", 1, 0.5],
-	["C5", 1, 1],
-	// #endregion
+	["C5", 1, 1]
+]
 
-	// #region Pre-Chorus
+const PreChorus: iNotes = [
 	["A#5", 1, 1],
 	["A5", 1, 1],
 	["A5", 1, 1],
@@ -188,7 +188,7 @@ const sequence: [string, number, number][] = [
 	["C6", 1, 1],
 	["G5", 1, 1],
 	["G5", 1, 2],
-	
+
 	["A#5", 1, 0.5],
 	["A5", 1, 1.5],
 	["A#5", 1, 0.5],
@@ -196,8 +196,15 @@ const sequence: [string, number, number][] = [
 	["A#5", 1, 0.5],
 	["A5", 1, 1.5],
 	["A#5", 1, 0.5],
-	["A5", 1, 1.5],
-	// #endregion
+	["A5", 1, 1.5]
+]
+
+const sequence: iNotes = [
+	...Beginning,
+
+	...Verse1,
+
+	...PreChorus
 ]
 
 document.getElementById("play")?.addEventListener("click", async () => {
