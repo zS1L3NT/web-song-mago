@@ -1,6 +1,7 @@
 import { PolySynth, Synth } from "tone"
 
 type iNotes = [string, number, number][]
+let latest = 0
 const synth = new PolySynth(Synth).toDestination()
 
 const Beginning: iNotes = [
@@ -427,7 +428,7 @@ const Bridge: iNotes = [
 	["C6", 1, 0.5],
 	["A#5", 1, 0.5],
 	["C6", 1, 4.5],
-	
+
 	["A#5", 1, 0.5],
 	["C6", 1, 0.5],
 	["D6", 1, 0.5],
@@ -435,7 +436,7 @@ const Bridge: iNotes = [
 	["A#5", 1, 1],
 	["A#5", 1, 0.5],
 	["C6", 1, 1],
-	["C6", 1, 0.5],
+	["C6", 1, 0.5]
 ]
 
 const sequence: iNotes = [
@@ -461,12 +462,16 @@ const sequence: iNotes = [
 
 	...Chorus,
 
-	...PostChorus,
+	...PostChorus
 ]
 
 document.getElementById("play")?.addEventListener("click", async () => {
+	const current = Date.now()
+	latest = current
 	for (const [note, time, pause] of sequence) {
-		synth.triggerAttackRelease(note, `${16 / time}n`)
-		await new Promise(res => setTimeout(res, pause * 250))
+		if (latest === current) {
+			synth.triggerAttackRelease(note, `${16 / time}n`)
+			await new Promise(res => setTimeout(res, pause * 250))
+		}
 	}
 })
