@@ -1,0 +1,16 @@
+{
+	"name": "web-song-mago",
+	"description": "Mago Song played from JavaScript",
+	"author": "zS1L3NT <zechariahtan144@gmail.com> (https://www.zectan.com)",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"tone": "^14.7.77"
+	},
+	"devDependencies": {
+		"vite": "^2.9.1"
+	}
+}
